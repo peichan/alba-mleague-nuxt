@@ -1,8 +1,41 @@
 <template>
-  <div>
-    <h1>ALBA M.LEAGUE {{ quarter }}</h1>
-    <div>{{ results }}</div>
-    <div>{{ ranking }}</div>
+  <div class="body">
+    <div class="header">ALBA M.LEAGUE {{ quarter }}</div>
+    <div class="content">
+      <h2 class="title">
+        <span lang="en">RANKING</span>
+        <span lang="ja">ランキング</span>
+      </h2>
+      <div class="result-item">
+        <ol class="result-rank-list">
+          <li class="result-rank-item" v-for="(result, index) in ranking" v-bind:key="index">
+            <div :class="getBadgeClass(index)">{{ index + 1 }}</div>
+            <div class="result-rank-name">{{ result.player }}</div>
+            <div class="result-rank-score">{{ result.point }}pt</div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="content">
+      <h2 class="title">
+        <span lang="en">RESULTS</span>
+        <span lang="ja">日程・結果</span>
+      </h2>
+      <div class="day-result" v-for="(dayResult, index) in results" v-bind:key="index">
+        <h2 class="day">
+          <span lang="ja">{{ dayResult.day }}</span>
+        </h2>
+        <div class="result-item">
+          <ol class="result-rank-list">
+            <li class="result-rank-item" v-for="(result, index2) in dayResult.results" v-bind:key="index2">
+              <div :class="getBadgeClass(index2)">{{ index2 + 1 }}</div>
+              <div class="result-rank-name">{{ result.player }}</div>
+              <div class="result-rank-score">{{ result.point }}pt</div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -347,5 +380,104 @@ export default class RankingComponent extends Vue implements WithRoute {
     ranking.sort(function(a, b) { return b.point - a.point });
     return ranking;
   }
+
+  getBadgeClass(rank: number): string {
+    if (rank == 0) {
+      return "result-rank-badge is-top";
+    } else if (rank == 1 || rank == 2) {
+      return "result-rank-badge is-top-three";
+    }
+    return "result-rank-badge";
+  }
 }
 </script>
+
+<style>
+/* リセットCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background: #118745;
+  border: 10px solid #118745;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+.body {
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.header {
+  display: block;
+  padding: 5px;
+  border-bottom: solid thin #118745;
+}
+
+.content {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.title span:lang(en) {
+  display: block;
+  font-size: 1rem;
+}
+
+.title span:lang(ja) {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.result-rank-item {
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.result-rank-badge {
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 25px;
+  color: #fff;
+  background-color: #999;
+}
+
+.result-rank-badge.is-top {
+  background-color: #cd0000;
+}
+
+.result-rank-badge.is-top-three {
+  background-color: #116423;
+}
+
+.result-rank-name {
+  width: 100px;
+  text-align: left;
+}
+
+.result-rank-score {
+  width: 100px;
+  text-align: right;
+}
+
+.day-result {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #007f31;
+  display: inline-block;
+}
+
+.day {
+  font-size: 1rem;
+}
+</style>

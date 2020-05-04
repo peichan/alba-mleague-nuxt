@@ -41,7 +41,10 @@ const nuxtConfig: NuxtConfiguration = {
     //     })
     //   }
     // }
-  }
+  },
+  link: [
+    { rel: 'stylesheet', href: 'http://fonts.googleapis.com/earlyaccess/notosansjp.css' }
+  ]
 }
 
 module.exports = nuxtConfig
