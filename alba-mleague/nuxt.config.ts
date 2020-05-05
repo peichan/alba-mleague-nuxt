@@ -44,7 +44,18 @@ const nuxtConfig: NuxtConfiguration = {
   },
   link: [
     { rel: 'stylesheet', href: 'http://fonts.googleapis.com/earlyaccess/notosansjp.css' }
-  ]
+  ],
+  generate: {
+    fallback: true,
+    routes: [
+      '/ranking/',
+      '/ranking/2020Q1',
+      '/ranking/2020Q2'
+    ]
+  },
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/alba-mleague-nuxt/': '/' 
+  }
 }
 
 module.exports = nuxtConfig
