@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <div class="header">ALBA M.LEAGUE {{ quarter.toUpperCase() }}</div>
-    <div class="content">
+    <div class="clcontent">
       <h2 class="title">
         <span lang="en">RANKING</span>
         <span lang="ja">ランキング</span>
@@ -16,7 +16,7 @@
         </ol>
       </div>
     </div>
-    <div class="content">
+    <div class="clcontent">
       <h2 class="title">
         <span lang="en">RESULTS</span>
         <span lang="ja">日程・結果</span>
@@ -415,6 +415,7 @@ body {
 }
 
 .body {
+  color: #363636;
   background: white;
   border-radius: 5px;
   text-align: center;
@@ -426,7 +427,7 @@ body {
   border-bottom: solid thin #118745;
 }
 
-.content {
+.clcontent {
   display: block;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -440,6 +441,7 @@ body {
 .title span:lang(ja) {
   display: block;
   font-size: 0.7rem;
+  margin-top: 3px;
 }
 
 .result-rank-item {
@@ -485,5 +487,6 @@ body {
 
 .day {
   font-size: 1rem;
+  font-weight: bold;
 }
 </style>

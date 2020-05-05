@@ -29,6 +29,13 @@ const nuxtConfig: NuxtConfiguration = {
   ** Build configuration
   */
   build: {
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    }
     /*
     ** Run ESLint on save
     */
@@ -50,7 +57,10 @@ const nuxtConfig: NuxtConfiguration = {
       '/ranking/2020q1',
       '/ranking/2020q2'
     ]
-  }
+  },
+  modules: [
+    '@nuxtjs/bulma'
+  ]
 }
 
 module.exports = nuxtConfig
