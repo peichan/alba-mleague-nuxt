@@ -8,7 +8,7 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
+    "generate": "nuxt-ts generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "lint": "eslint --ext .ts,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
