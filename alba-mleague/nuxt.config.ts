@@ -43,6 +43,7 @@ const nuxtConfig: NuxtConfiguration = {
     // }
   },
   link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/alba-mleague-nuxt/favicon.ico' },
     { rel: 'stylesheet', href: 'http://fonts.googleapis.com/earlyaccess/notosansjp.css' }
   ],
   generate: {
