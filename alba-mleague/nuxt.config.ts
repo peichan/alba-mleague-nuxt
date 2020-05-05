@@ -49,8 +49,8 @@ const nuxtConfig: NuxtConfiguration = {
     fallback: true,
     routes: [
       '/ranking/',
-      '/ranking/2020Q1',
-      '/ranking/2020Q2'
+      '/ranking/2020q1',
+      '/ranking/2020q2'
     ]
   }
 }

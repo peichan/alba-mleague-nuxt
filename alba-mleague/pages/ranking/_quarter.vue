@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <div class="header">ALBA M.LEAGUE {{ quarter }}</div>
+    <div class="header">ALBA M.LEAGUE {{ quarter.toUpperCase() }}</div>
     <div class="content">
       <h2 class="title">
         <span lang="en">RANKING</span>
@@ -64,7 +64,7 @@ class DayResult {
 }
 
 const quarterResults: { [key: string]: DayResult[] } = {
-  "2020Q2": [
+  "2020q2": [
     new DayResult("5/3 (日)", [
       new Result("北口 善紀", 249),
       new Result("足立 真陽", 132.5),
@@ -187,7 +187,7 @@ const quarterResults: { [key: string]: DayResult[] } = {
       new Result("清水 貴大", -123)
     ])
   ],
-  "2020Q1": [
+  "2020q1": [
     new DayResult("3/31 (火)", [
       new Result("石橋 享典", 132),
       new Result("竹澤 亮", 115),
