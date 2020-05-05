@@ -1,6 +1,22 @@
 <template>
   <div class="body">
     <div class="header">ALBA M.LEAGUE {{ quarter.toUpperCase() }}</div>
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <div class="navbar-burger" data-target="navMenu" v-bind:class="{ 'is-active': menuActive }" v-on:click="menuToggle()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu" id="navMenu" v-bind:class="{ 'is-active': menuActive }">
+        <div class="navbar-end">
+          <nuxt-link to="/ranking/" class="navbar-item">TOTAL</nuxt-link>
+          <nuxt-link to="/ranking/2020q1" class="navbar-item">2020Q1</nuxt-link>
+          <nuxt-link to="/ranking/2020q2" class="navbar-item">2020Q2</nuxt-link>
+      </div>
+    </div>
+    </nav>
     <div class="clcontent">
       <h2 class="title">
         <span lang="en">RANKING</span>
@@ -40,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Provide } from 'vue-property-decorator'
 import { Route } from "vue-router"
 
 class Result {
@@ -347,6 +363,12 @@ interface WithRoute{
 
 @Component
 export default class RankingComponent extends Vue implements WithRoute {
+  @Provide() menuActive: boolean = false
+
+  menuToggle(): void {
+    this.menuActive = !this.menuActive
+  }
+
   get quarter(): string {
     const quarter = this.$route.params.quarter
     if (!quarter) {
@@ -489,4 +511,9 @@ body {
   font-size: 1rem;
   font-weight: bold;
 }
+
+.navbar-end {
+  margin: auto;
+}
+
 </style>
