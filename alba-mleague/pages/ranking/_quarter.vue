@@ -81,6 +81,20 @@ class DayResult {
 
 const quarterResults: { [key: string]: DayResult[] } = {
   "2020q2": [
+    new DayResult("5/15 (金)", [
+      new Result("竹澤 亮", 152.5),
+      new Result("北口 善紀", 122),
+      new Result("金子 侑起", 36),
+      new Result("祖父江 尚也", 9),
+      new Result("清水 貴大", -22.5),
+      new Result("石橋 享典", -102.5),
+      new Result("網 亮太朗", -124.5)
+    ]),
+    new DayResult("5/14 (木)", [
+      new Result("竹澤 亮", 74),
+      new Result("島田 昴祐", -12),
+      new Result("網 亮太朗", -32)
+    ]),
     new DayResult("5/9 (土)", [
       new Result("竹澤 亮", 246),
       new Result("清水 貴大", 62.5),
