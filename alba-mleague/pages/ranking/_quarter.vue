@@ -120,7 +120,7 @@ const quarterResults: { [key: string]: DayResult[] } = {
       new Result("清水 明彦", -65.5),
       new Result("網 亮太朗", -182)
     ]),
-    new DayResult("7/10 (金))", [
+    new DayResult("7/10 (金)", [
       new Result("金子 侑起", 102.5),
       new Result("祖父江 尚也", 27),
       new Result("石橋 享典", -36),
