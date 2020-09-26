@@ -82,6 +82,41 @@ class DayResult {
 
 const quarterResults: { [key: string]: DayResult[] } = {
   "2020q3": [
+    new DayResult("9/26 (土)", [
+      new Result("稲田 翼", 169.5),
+      new Result("金子 侑起", 95.5),
+      new Result("竹澤 亮", 17),
+      new Result("足立 真陽", 21.5),
+      new Result("清水 明彦", -63.5),
+      new Result("石橋 享典", -80),
+      new Result("清水 貴大", -90)
+    ]),
+    new DayResult("9/22 (火)", [
+      new Result("竹澤 亮", 216),
+      new Result("北口 善紀", 1),
+      new Result("足立 真陽", -5),
+      new Result("清水 明彦", -172)
+    ]),
+    new DayResult("9/12 (土)", [
+      new Result("足立 真陽", 164),
+      new Result("金子 侑起", 116),
+      new Result("石橋 享典", 32),
+      new Result("稲田 翼", -63),
+      new Result("祖父江 尚也", -199)
+    ]),
+    new DayResult("9/4 (金)", [
+      new Result("足立 真陽", 196),
+      new Result("島田 昴祐", 186),
+      new Result("北口 善紀", 68),
+      new Result("竹澤 亮", 51.5),
+      new Result("清水 明彦", 47),
+      new Result("稲田 翼", 1.5),
+      new Result("網 亮太朗", -18.5),
+      new Result("石橋 享典", -83.5),
+      new Result("祖父江 尚也", -88),
+      new Result("金子 侑起", -91.5),
+      new Result("清水 貴大", -158.5)
+    ]),
     new DayResult("8/29 (土)", [
       new Result("足立 真陽", 107.5),
       new Result("北口 善紀", 74.5),
