@@ -85,8 +85,8 @@ const quarterResults: { [key: string]: DayResult[] } = {
     new DayResult("9/26 (土)", [
       new Result("稲田 翼", 169.5),
       new Result("金子 侑起", 95.5),
-      new Result("竹澤 亮", 17),
       new Result("足立 真陽", 21.5),
+      new Result("竹澤 亮", 17),
       new Result("清水 明彦", -63.5),
       new Result("石橋 享典", -80),
       new Result("清水 貴大", -90)
