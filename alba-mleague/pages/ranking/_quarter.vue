@@ -15,6 +15,7 @@
           <nuxt-link to="/ranking/2020q1" class="navbar-item">2020Q1</nuxt-link>
           <nuxt-link to="/ranking/2020q2" class="navbar-item">2020Q2</nuxt-link>
           <nuxt-link to="/ranking/2020q3" class="navbar-item">2020Q3</nuxt-link>
+          <nuxt-link to="/ranking/2020q4" class="navbar-item">2020Q4</nuxt-link>
       </div>
     </div>
     </nav>
@@ -81,6 +82,20 @@ class DayResult {
 }
 
 const quarterResults: { [key: string]: DayResult[] } = {
+  "2020q4": [
+    new DayResult("10/16 (土)", [
+      new Result("竹澤 亮", 199.5),
+      new Result("清水 明彦", 58.5),
+      new Result("網 亮太朗", -32),
+      new Result("稲田 翼", -186)
+    ]),
+    new DayResult("10/9 (金)", [
+      new Result("金子 侑起", 82),
+      new Result("稲田 翼", 54),
+      new Result("足立 真陽", 37),
+      new Result("北口 善紀", -133)
+    ]),
+  ],
   "2020q3": [
     new DayResult("9/26 (土)", [
       new Result("稲田 翼", 169.5),
