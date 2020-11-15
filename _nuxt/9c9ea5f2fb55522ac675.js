@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{162:function(n,e,t){"use strict";t.r(e);var o=t(1).a.extend({fetch:function(n){(0,n.redirect)(301,"/ranking/2020q2")}}),c=t(24),component=Object(c.a)(o,void 0,void 0,!1,null,null,null);e.default=component.exports}}]);
